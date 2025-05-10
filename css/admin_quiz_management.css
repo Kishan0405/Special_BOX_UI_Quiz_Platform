@@ -1,0 +1,317 @@
+/* Base styling and resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    /* Improve default font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Consider using padding-inline for LTR/RTL support */
+}
+
+/* Success message styling */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #28a745;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Dashboard columns */
+.dashboard-column {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    flex: 1;
+    /* Add transition for smoother hover effects if needed */
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.dashboard-column:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #4a5568;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Add box-shadow transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #4299e1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    /* Add transform transition for subtle feedback */
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2c5282;
+    transform: scale(1.02);
+    /* Subtle hover effect */
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+    /* Subtle click feedback */
+}
+
+/* Headings */
+h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+/* Search bar */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#quizSearch {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Consistent focus style */
+}
+
+#quizSearch:focus {
+    border-color: #4299e1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth hover */
+}
+
+/* Action links */
+.action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    /* Align items to the start by default */
+}
+
+.action-links a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    /* Add transform */
+}
+
+.action-links a:hover {
+    background-color: #cbd5e0;
+    transform: scale(1.05);
+    /* Subtle hover effect */
+}
+
+.action-links a:active {
+    transform: scale(0.95);
+    /* Subtle click feedback */
+}
+
+.action-links a:nth-child(1) {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.action-links a:nth-child(2) {
+    background-color: #e6fffa;
+    color: #2c7a7b;
+}
+
+.action-links a:nth-child(3) {
+    background-color: #fff5f5;
+    color: #c53030;
+}
+
+.action-links a:nth-child(4) {
+    background-color: #f0fff4;
+    color: #276749;
+}
+
+/* Media Queries for Responsive Design */
+/* Tablet and larger */
+@media (min-width: 768px) {
+    .dashboard-container {
+        flex-direction: row;
+    }
+
+    .dashboard-column {
+        max-width: calc(50% - 15px);
+    }
+
+    /* Adjust action links alignment on larger screens if needed */
+    .action-links {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    .dashboard-column {
+        padding: 20px;
+    }
+
+    .action-links {
+        flex-direction: row;
+        /* Keep them in a row but allow wrapping */
+        justify-content: flex-start;
+        /* Align to the start */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        /* Prevent horizontal scrolling issues */
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .dashboard-column {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="submit"] {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .action-links {
+        flex-direction: column;
+        /* Stack links on very small screens */
+        align-items: stretch;
+        /* Make them full width */
+    }
+
+    .action-links a {
+        display: block;
+        /* Make them block elements */
+        width: 100%;
+        /* Take full width */
+        margin-bottom: 5px;
+        /* Add some spacing */
+        text-align: center;
+        /* Center the text */
+    }
+
+    .action-links a:last-child {
+        margin-bottom: 0;
+        /* Remove bottom margin from the last link */
+    }
+}

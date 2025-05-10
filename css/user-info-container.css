@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Register/Login Form Container */
+.user-info-container {
+    max-width: 480px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background: linear-gradient(145deg, #ffffff, #f6f9fc);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-info-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.user-info-container h2 {
+    color: #1a2a44;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+label {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    outline: none;
+    transform: scale(1.01);
+}
+
+input[type="file"] {
+    padding: 0.65rem 1rem;
+    background: #f9fafb;
+    border: 2px dashed #d1d5db;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #93c5fd;
+    background: #eff6ff;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+input[type="submit"]:focus {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+}
+
+/* Links and Text */
+p {
+    text-align: center;
+    margin-top: 1.25rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+p a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+    color: #b91c1c;
+    background: #fef2f2;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #fecaca;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .user-info-container,
+    input[type="submit"],
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="file"] {
+        transition: none;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .user-info-container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    input[type="submit"] {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .user-info-container {
+        padding: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="file"] {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.95rem;
+    }
+}
