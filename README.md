@@ -1,48 +1,63 @@
-# Special BOX UI
+# Special BOX UI Quiz Platform
 
-**Special BOX UI** is a quiz-based platform designed to create engaging and educational quizzes on various topics. This project was created by **Kishan Raj**, a student at **N M A M Institute of Technology, Nitte**, India.
+A modern, secure quiz platform developed in India by **Special BOX UI**, headquartered in Udupi, India. This platform was created by **Kishan Raj**, a Biotechnology Engineering student at **N.M.A.M Institute of Technology**, Nitte, Karkala.
 
-## 🌟 Features
+---
 
-- **Create & Manage Forms**: Administrators can create new forms with security features, customize titles, descriptions, and questions.
-- **Interactive Quiz Options**: Add multiple choice questions, single checkboxes, and text-based input fields for a variety of user interactions.
-- **Responsive Design**: Built with a responsive and user-friendly interface that works seamlessly on different devices, especially mobile.
-- **Secure**: Form submissions are handled with security in mind to protect user data.
-- **Scalable Database**: A robust database (`specialboxuiforms`) designed to handle multiple quizzes and user responses efficiently.
+## 🌟 Overview
 
-## 🚀 Technologies Used
+The **Special BOX UI Quiz Platform** is designed for students, educators, and quiz enthusiasts. It supports individual and group quizzes, private events, and AI-assisted quiz creation, with a strong focus on privacy and security.
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP
-- **Database**: MySQL (Admin controlled)
-- **Other Tools**: Font Awesome for icons
+---
 
-## 📂 Project Structure
+## 🔐 Authentication
 
-```
-/css           # Stylesheets
-/js            # JavaScript files
-/php           # Backend PHP scripts
-/forms         # Quiz and form pages
-/assets        # Icons and other assets
-index.html     # Homepage
-README.md      # Project documentation
-```
+- Simple user authentication with only **Username**, **Password**, and **Email**.
+- Email and username are mandatory for quiz creation and private event participation.
+- Non-registered users can attempt public quizzes, but scores and correct answers are hidden.
+- Registered users enjoy full access to quiz reports, answers, events, and more.
 
-## 🎓 About the Creator
+---
 
-**Kishan Raj** is a 2nd-year undergraduate student pursuing a Bachelor of Technology (B.Tech) in Biotechnology Engineering at the **N M A M Institute of Technology**, Nitte. Kishan has a keen interest in **Environmental Biotechnology** and **Plant Biotechnology**, with a focus on healthcare and environmental sustainability. He is also passionate about **web development** and **technology**, continually exploring new ways to create and enhance digital platforms.
+## 🔑 Key Features
 
-## 🔗 How to Contribute
+- 🧾 **Account Control**: Only registered users can access private events and detailed results.
+- 🛡️ **Strict Quiz Locking**: Once a quiz is locked, neither users nor admins can resume it.
+- 🔍 **User Search**: Search for participants in private events using username or email.
+- ✨ **Quiz Modes**: Choose from **Sequential** or **Step-by-Step** quiz layouts.
+- 🤖 **Special BOX AI Mini Version**: Generate quizzes using PHP-based backend AI.
+- 📋 **Instruction Panel**: Clear guidelines before quiz begins.
+- 🧠 **Create & Manage Quizzes**: Admin dashboard for creating, editing, and deleting quizzes.
+- 🗃️ **Upcoming Features**:
+  - Report Analytics
+  - Category Management
+  - Separate interfaces for quiz creation and management (from June 2025)
 
-Contributions are welcome! Feel free to fork this repository, submit issues, or send pull requests.
+---
 
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Create a new Pull Request
+## ⚠️ Notes & Disclaimers
 
-## 📧 Contact
+- We do **not** store or share your email, username, or password with anyone.
+- Occasionally, due to upgrades, user accounts may be **automatically deleted** and **cannot be recovered**.
+- **Report bugs** or interface issues to help improve the platform.
+- Developer retains full rights to remove or review content based on community feedback or policy violations.
+- **Special BOX UI is not liable** for any data breaches, misuse, or violations by users.
 
-If you have any questions or feedback, feel free to reach out via email: [kishanbantakal@gmail.com](mailto:kishanbantakal@gmail.com).
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- PHP 7.4+
+- MySQL/MariaDB
+- Apache/Nginx server
+- Composer (optional)
+
+### Installation
+
+```bash
+git clone https://github.com/Kishan0405/specialboxuiquiz.git
+cd specialboxuiquiz
+# Import database from 'data.sql' into your MySQL server
+# Configure /config/db.php with your database credentials
