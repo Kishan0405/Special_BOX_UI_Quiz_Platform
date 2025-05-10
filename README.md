@@ -50,6 +50,7 @@ The **Special BOX UI Quiz Platform** is designed for students, educators, and qu
 ### Prerequisites
 
 - PHP 7.4+
+- XAMPP Control Panel
 - MySQL/MariaDB
 - Apache/Nginx server
 - Composer (optional)
@@ -57,7 +58,7 @@ The **Special BOX UI Quiz Platform** is designed for students, educators, and qu
 ### Installation
 
 ```bash
-git clone https://github.com/Kishan0405/specialboxuiquiz.git
+git clone https://github.com/Kishan0405/Special_BOX_UI_Quiz_Platform.git
 cd specialboxuiquiz
 # Import database from 'data.sql' into your MySQL server
 # Configure /config/db.php with your database credentials
